@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN		apk --update \
+RUN		apk update \
       && apk add --no-cache git build-base libstdc++\
       && git clone https://github.com/sass/sassc\
       && cd /sassc/ \
