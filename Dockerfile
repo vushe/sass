@@ -8,4 +8,4 @@ RUN		apk --update add --no-cache git build-base libstdc++\
       && rm -rf /sassc
       && apk del git build-base
 
-      ENTRYPOINT [ "sass", "-watch" ]
+      ENTRYPOINT [ "sass", "--watch" ]
