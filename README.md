@@ -3,7 +3,7 @@
 Two ways to use this docker image from command line:
 
  sass command help
-docker run -d --rm sass -h 
+docker run -d --rm sass -h
 
 1- Working like sass -watch:
 
@@ -16,4 +16,8 @@ if you are a mac user-> $PWD must begin with /Users/
 
 2- Using image as a sass command
 
-docker run -d  --name sass -v $PWD:/app/  sass <<whatever.scss>> <<whatever.css>>
+docker run --rm -v $(pwd):$(pwd) -w $(pwd) sass <<whatever.scss>>
+
+maybe you want to save the css file:
+
+docker run --rm -v $(pwd):$(pwd) -w $(pwd) sass whatever.scss  > whatever.css

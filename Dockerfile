@@ -16,4 +16,6 @@ LABEL maintainer="pablofelix@coomars.com"\
 
 COPY $PWD/watch.sh /usr/bin/watch
 
-CMD [ "watch"]
+
+
+ENTRYPOINT ["watch"]

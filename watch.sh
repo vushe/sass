@@ -14,6 +14,5 @@ if [ "$ENV" = 'watch' ]; then
 
 	done
 else
-	exec sass
-
+	exec sass $*
 fi
