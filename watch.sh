@@ -11,8 +11,7 @@ if [ "$ENV" = 'watch' ]; then
 
 			exec sass /app/style.scss /app/css/style.css --style compressed
 
-
 	done
 else
-	exec sass $*
+	exec sass $@
 fi
