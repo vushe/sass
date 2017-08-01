@@ -16,5 +16,4 @@ LABEL maintainer="pablofelix@coomars.com"\
 #copy to /usr/bin to have access in all directories
 COPY $PWD/watch.sh /usr/bin/watch
 
-
 ENTRYPOINT ["watch"]

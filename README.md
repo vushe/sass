@@ -8,7 +8,7 @@ docker run -d --rm sass -h
 
 1- Working like sass -watch, will create two directories sass and css also will create a main file called style.scss if you haven't in your path. style.scss will be project's main file for scss:
 
-docker run -d  --name sass -v $PWD:/app/  pablofelix/sass watch
+docker run -d  --name sass -e "ENV=watch" -v $(pwd):/app pablofelix/sass 
 
 if you are a mac user-> $PWD must begin in /Users/ directory
 
