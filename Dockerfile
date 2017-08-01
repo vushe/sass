@@ -1,6 +1,4 @@
 FROM alpine
-
-
 # install sass and inotify
 RUN   apk update \
       && apk add --no-cache git build-base libstdc++ inotify-tools\
