@@ -1,6 +1,8 @@
 FROM alpine
+
+
 # install sass and inotify
-RUN		apk update \
+RUN   apk update \
       && apk add --no-cache git build-base libstdc++ inotify-tools\
       && git clone https://github.com/sass/sassc\
       && cd /sassc/ \
@@ -11,11 +13,10 @@ RUN		apk update \
       && apk del git build-base
 
 LABEL maintainer="pablofelix@coomars.com"\
-      version="1.0"\
+      version="1.1"\
       description="sass image with shell watcher"
 #copy to /usr/bin to have access in all directories
 COPY $PWD/watch.sh /usr/bin/watch
-
 
 
 ENTRYPOINT ["watch"]
