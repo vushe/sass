@@ -14,7 +14,7 @@ if [ $@ = 'watch' ]; then
 		fi
                 
 		MONITORDIR="/app/"
-		inotifywait -m -r -e modify,close_write,move,create,delete --format '%w%f' "/app/" | while read FILE_CHANGED
+		inotifywait -m -r -e modify,close_write,move,create,delete --format '%w%f' "/app/sass/" | while read FILE_CHANGED
 
 	do
 			exec sass /app/sass/style.scss /app/css/style.css --style compressed
