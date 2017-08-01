@@ -24,3 +24,21 @@ docker run --rm -v $(pwd):$(pwd) -w $(pwd) pablofelix/sass whatever.scss  > what
 or
 
 docker run --rm -v $(pwd):$(pwd) -w $(pwd) pablofelix/sass whatever.scss whatever.css
+
+
+DOCKER COMPOSE
+
+docker-compose.yml 
+-------------------------------------------------------------
+version: '3.3'
+services:
+    sass:
+          image: pablofelix/sass
+	  environment:
+	   - ENV=watch
+	  volumes:
+	   - $PWD:/app/
+
+
+---------------------------------------------------------------
+running docker compose-yml in terminal => docker-compose -d up	   

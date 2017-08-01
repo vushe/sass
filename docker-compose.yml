@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+    sass:
+          image: pablofelix/sass
+           environment:
+            - ENV=watch
+           volumes:
+            - $PWD:/app/
